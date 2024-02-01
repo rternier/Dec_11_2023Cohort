@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookshelf</title>
+  <style>
+  </style>
+</head>
+<body>
+
+    <h1>My bookshelf</h1>
+    <div>
+      <a href="/add">Add</a> | 
+      <a href="/">Home</a>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <td></td>
+          <td>Title</td>
+          <td>Author</td>
+          <td>Genre</td>
+          <td>Publication Year</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% books.forEach(function(book){ %>
+          <tr>
+            <td><a href="/edit/<%= encodeURIComponent(book.title) %>">Edit</a></td>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.genre %></td>
+            <td><%= book.publicationYear %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  
+</body>
+</html>
