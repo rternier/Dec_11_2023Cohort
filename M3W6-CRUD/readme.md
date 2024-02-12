@@ -21,8 +21,8 @@ Topics to Cover:
 
 
 ## Links
-GitHub: https://github.com/rternier/LHL_June_12/tree/main/M3W6-CRUDExpress
-PPT: https://github.com/rternier/LHL_June_12/blob/main/M3W6-CRUDExpress/M3W6%20-%20CRUD%20with%20Express.pptx
+GitHub: [https://github.com/rternier/LHL_June_12/tree/main/M3W6-CRUDExpress](https://github.com/rternier/Dec_11_2023Cohort/tree/main/M3W6-CRUD)
+
 
 
 **Common Web Architectures**
