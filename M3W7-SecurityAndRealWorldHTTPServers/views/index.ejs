@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="appName" content="TestApp"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHL Express JS & CRUD</title>
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+    <main>
+    <h1>Bookshelffff</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Genre</td>
+                <td>Publication year</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(function(book) { %>
+                <tr>
+                    <td>
+                        <a href="/books/<%= encodeURIComponent(book.title) %>">Edit</a>
+                    </td>
+                    <td><%=book.title %> </td>
+                    <td><%=book.author %> </td>
+                    <td><%=book.genre %> </td>
+                    <td><%=book.publicationYear %> </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

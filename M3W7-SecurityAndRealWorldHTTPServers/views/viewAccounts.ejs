@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="appName" content="TestApp"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LHL Express JS & CRUD</title>
+    <link rel="stylesheet" href="./styles/layout.css" as="style" >
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+    <main>
+      
+        <table>
+            <thead>
+                <tr>
+                    <th>Email Address</th>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% accounts.forEach((account) => { %>
+                    <tr>
+                        <td><%= account.emailAddress %></td>
+                        <td><%= account.name %></td>
+                        <td><%= account.password %></td>
+                        <td>
+                            <a href="/account/<%= account.emailAddress %>">Edit</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+</main>
+</body>
+</html>

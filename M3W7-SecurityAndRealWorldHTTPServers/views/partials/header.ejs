@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="/public/stylesheets/layout.css" as="style" >
+<header>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/books/add">Add Book</a></li>
+          <li><a href="/account">Accounts</a></li>
+        </ul>
+      </div>
+      <% if(!user) { %>
+      <div class="authentication">
+        <form action="/account/login" method="POST">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <input type="checkbox" id="rememberMe" name="rememberMe">
+          <label for="rememberMe">Remember Me</label>
+          <button type="submit">Login</button>
+        </form>
+        <a href="/account/create">Create Account</a>
+      </div>
+    <%} else {%>
+      <div>
+    
+        <a href="/account/logout">Logout</a>
+      </div>
+      <%}%>
+
+   
+ 
+    </nav>
+  </header>

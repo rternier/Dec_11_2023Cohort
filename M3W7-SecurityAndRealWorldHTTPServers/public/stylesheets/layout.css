@@ -1,0 +1,35 @@
+header {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin for the last menu item */
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+}
+
+.right-side form,
+.right-side a {
+  margin-left: 10px;
+}
